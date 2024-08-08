@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Taking App</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+  <div class="login-form" id="login-form-section">
+    <h1>.!.NOTE-TAKING APPLICATION.!.</h1>
+    <div class="container">
+      <div class="main">
+        <div class="content" id="login-form">
+          <h2>Log In</h2>
+          <form id="login-form-element" onsubmit="login(event)">
+            <input type="text" id="login-username" placeholder="Username" required autofocus="">
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button class="btn" type="submit">Login</button>
+          </form>
+          <p class="account">Don't Have An Account? <a href="#" onclick="showRegisterForm()">Register</a></p>
+        </div>
+        <div class="content" id="register-form" style="display: none;">
+          <h2>Register</h2>
+          <form id="register-form-element" onsubmit="register(event)">
+            <input type="text" id="register-username" placeholder="Username" required autofocus="">
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button class="btn" type="submit">Register</button>
+          </form>
+          <p class="account">Already Have An Account? <a href="#" onclick="showLoginForm()">Log In</a></p>
+        </div>
+        <div class="form-img">
+          <img src="/IMAGES/imagenote.png" alt="Background Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-----------------------NOTE-TAKING-APPLICATION--------------------->
+
+
+  <div class="notes-wrapper">
+    <div id="notes" style="display: none;">
+      <div class="header">
+        <h1>Note Taking App</h1>
+        <h2>Create, Update, and Delete Your Notes</h2>
+      </div>
+      
+      <div class="popup-box">
+        <div class="popup">
+          <div class="content">
+            <header>
+              <p></p>
+              <i class="uil uil-times"></i>
+            </header>
+            <form id="note-form" action="#">
+              <div class="row title">
+                <label>Title</label>
+                <input type="text" id="note-title" spellcheck="false">
+              </div>
+              <div class="row description">
+                <label>Description</label>
+                <textarea id="note-description" spellcheck="false"></textarea>
+              </div>
+              <button type="submit">Save Note</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <li class="add-box">
+          <div class="icon"><i class="uil uil-plus"></i></div>
+          <p>Add new note</p>
+        </li>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="/scripts.js"></script>
+  <script src="/NoteApp.js"></script>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--FINAL CODE
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Note Taking App</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+
+<body>
+  <div class="login-form" id="login-form-section">
+    <h1>.!.NOTE-TAKING APPLICATION.!.</h1>
+    <div class="container">
+      <div class="main">
+        <div class="content" id="login-form">
+          <h2>Log In</h2>
+          <form id="login-form-element" onsubmit="login(event)">
+            <input type="text" id="login-username" placeholder="Username" required autofocus="">
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button class="btn" type="submit">Login</button>
+          </form>
+          <p class="account">Don't Have An Account? <a href="#" onclick="showRegisterForm()">Register</a></p>
+        </div>
+        <div class="content" id="register-form" style="display: none;">
+          <h2>Register</h2>
+          <form id="register-form-element" onsubmit="register(event)">
+            <input type="text" id="register-username" placeholder="Username" required autofocus="">
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button class="btn" type="submit">Register</button>
+          </form>
+          <p class="account">Already Have An Account? <a href="#" onclick="showLoginForm()">Log In</a></p>
+        </div>
+        <div class="form-img">
+          <img src="/IMAGES/imagenote.png" alt="Background Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+-------------------NOTE-TAKING-APPLICATION--------------------
+
+
+<div class="notes-wrapper">
+  <div id="notes" style="display: none;">
+    <div class="header">
+      <h1>Note Taking App</h1>
+      <h2>Create, Update, and Delete Your Notes</h2>
+    </div>
+    
+    <div class="popup-box">
+      <div class="popup">
+        <div class="content">
+          <header>
+            <p></p>
+            <i class="uil uil-times"></i>
+          </header>
+          <form id="note-form" action="#">
+            <div class="row title">
+              <label>Title</label>
+              <input type="text" id="note-title" spellcheck="false">
+            </div>
+            <div class="row description">
+              <label>Description</label>
+              <textarea id="note-description" spellcheck="false"></textarea>
+            </div>
+            <button type="submit">Save Note</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <li class="add-box">
+        <div class="icon"><i class="uil uil-plus"></i></div>
+        <p>Add new note</p>
+      </li>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="/scripts.js"></script>
+<script src="/NoteApp.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+-->
