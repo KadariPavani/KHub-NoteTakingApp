@@ -1,5 +1,7 @@
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from motor.motor_asyncio import AsyncIOMotorClient
 from passlib.context import CryptContext
@@ -106,9 +108,15 @@ async def update_note(note_id: str, note: NoteIn, username: str):
         return {"message": "Note updated successfully"}
     raise HTTPException(status_code=404, detail="Note not found or not owned by the user")
 
-@app.get("/")
+# Serve the static files
+app.mount("/static", StaticFiles(directory="."), name="static")
+# Serve images from the IMAGES directory
+app.mount("/images", StaticFiles(directory="IMAGES"), name="images")
+
+@app.get("/", response_class=HTMLResponse)
 async def root():
-    return {"message": "Welcome to the Note Taking App API"}
+    with open("index.html") as f:
+        return HTMLResponse(content=f.read(), status_code=200)
 
 if __name__ == "__main__":
     import uvicorn

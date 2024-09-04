@@ -11,7 +11,7 @@
     position: relative;
     min-height: 100vh;
     z-index: 0;
-    background-image: url(/IMAGES/image\ copy\ 2.png);
+    background-image: url(static/IMAGES/image\ copy\ 2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -191,7 +191,7 @@
 /*-----------------STYLES FOR NOTE-TAKING-APPLICATION INTERFACE------------------*/
 
 body {
-  background-image: url(/IMAGES/image\ copy\ 2.png);
+  background-image: url(static/IMAGES/image\ copy\ 2.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

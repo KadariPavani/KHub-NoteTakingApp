@@ -5,9 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Note Taking App</title>
-  <link rel="stylesheet" href="/styles.css">
+  <!-- Correctly reference the CSS file served by FastAPI -->
+  <link rel="stylesheet" href="/static/styles.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
+  <style>
+    body {
+      background-image: url('static/IMAGES/image\ copy\ 2.png'); /* Update with the correct path */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+  </style>
 </head>
 
 <body>
@@ -35,14 +46,14 @@
           <p class="account">Already Have An Account? <a href="#" onclick="showLoginForm()">Log In</a></p>
         </div>
         <div class="form-img">
-          <img src="/IMAGES/imagenote.png" alt="Background Image">
+          <!-- Correctly reference the image file served by FastAPI -->
+          <img src="/static/IMAGES/imagenote.png" alt="Background Image">
         </div>
       </div>
     </div>
   </div>
 
-<!-----------------------NOTE-TAKING-APPLICATION--------------------->
-
+  <!-----------------------NOTE-TAKING-APPLICATION--------------------->
 
   <div class="notes-wrapper">
     <div id="notes" style="display: none;">
@@ -50,7 +61,7 @@
         <h1>Note Taking App</h1>
         <h2>Create, Update, and Delete Your Notes</h2>
       </div>
-      
+
       <div class="popup-box">
         <div class="popup">
           <div class="content">
@@ -82,15 +93,14 @@
     </div>
   </div>
 
+  <!-- Correctly reference the JS files served by FastAPI -->
+  <script src="/static/scripts.js"></script>
+  <script src="/static/NoteApp.js"></script>
 
-
-
-  <script src="/scripts.js"></script>
-  <script src="/NoteApp.js"></script>
-  
 </body>
 
 </html>
+
 
 
 
